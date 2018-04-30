@@ -8,8 +8,6 @@ public class Theatre {
     private Thread light;
     private Thread actor;
 
-    private CountDownLatch ringCount = new CountDownLatch(3);
-
     Theatre() {
         setThreads();
     }
@@ -19,13 +17,11 @@ public class Theatre {
         ring.start();
         music.start();
         actor.start();
-
-        try {
-            actor.join();
-        } catch (InterruptedException e) {e.printStackTrace();};
     }
 
     private void setThreads() {
+        CountDownLatch ringCount = new CountDownLatch(3);
+
         this.ring = new Thread(new Ring(ringCount));
         this.music = new Thread(new Music(ringCount));
         this.light = new Thread(new Light(ringCount));

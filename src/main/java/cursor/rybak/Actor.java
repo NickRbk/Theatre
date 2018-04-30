@@ -17,6 +17,8 @@ public class Actor implements Runnable {
         try {
             ring.await();
             System.out.println("Actor appears on scene...");
-        } catch (InterruptedException e) {e.printStackTrace();}
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

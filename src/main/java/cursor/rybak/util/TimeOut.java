@@ -5,7 +5,8 @@ public class TimeOut {
         try {
             Thread.sleep(timeOut);
             System.out.println(msg);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        catch (InterruptedException e) { e.printStackTrace();}
     }
 }

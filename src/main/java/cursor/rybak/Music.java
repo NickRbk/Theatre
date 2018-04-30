@@ -17,6 +17,8 @@ public class Music implements Runnable {
         try {
             ring.await();
             System.out.println("Music on...");
-        } catch (InterruptedException e) {e.printStackTrace();}
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
