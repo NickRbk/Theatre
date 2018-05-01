@@ -7,6 +7,6 @@
 - build the maven project ```mvn package```
 - start app with the below cmd
           
-            java -cp target/theatre-1.0-SNAPSHOT.jar cursor.rybak.Main
+            java -jar target/theatre-1.0-SNAPSHOT.jar
 
 
